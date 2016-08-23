@@ -1,0 +1,38 @@
+<?php
+/**
+ * Template part for displaying posts on home page.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package stainless
+ */
+
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class('bgblock1-home'); ?>>
+
+		<?php 
+			
+			global $post; 
+			$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 1280,853 ), false, '' );
+			
+			if (!empty($src)) { ?>
+			<div class="post_thumb post_thumb-bgblock" style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<?php echo $src[0]; ?> ) top / cover fixed no-repeat;">
+		<?php
+			the_title( '<h2 class="entry-title entry-title-bgblock">', '</h2>' );
+		
+			the_content( sprintf(
+				/* translators: %s: Name of current post. */
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'stainless' ), array( 'span' => array( 'class' => array() ) ) ),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			) );
+
+		?>
+		<a href="#" class="button button-bgblock eModal-1">
+				<?php _e('Заказать расчет'); ?>
+			</a>
+		<a href="#catalog-home" class="next-block-link"></a>
+		</div>
+			<?php } else {} ?>
+
+</article><!-- #post-## -->

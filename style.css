@@ -447,12 +447,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: none;
-	/*border-color: #ccc #ccc #bbb;*/
-	/*border-radius: 3px;*/
-	/*background: #e6e6e6;*/
 	background: #f9ba32;
-	/*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);*/
-	/*color: rgba(0, 0, 0, .8);*/
 	color: white;
 	font-size: 12px;
 	font-size: 0.75rem;
@@ -461,17 +456,12 @@ input[type="submit"] {
 	box-shadow: .3rem .3rem 0 black;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
 	transition: all 1s;
-	/*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);*/
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	/*border-color: #ccc #bbb #aaa;*/
-	/*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);*/
-	/*box-shadow: .3rem .3rem 0 black;
-	background: #f39c12;*/
 }
 
 button:focus,
@@ -482,10 +472,6 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	/*border-color: #aaa #bbb #bbb;*/
-	/*box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);*/
-	/*box-shadow: .3rem .3rem 0 black;
-	background: #f39c12;*/
 }
 
 input[type="text"],
@@ -533,10 +519,6 @@ textarea:focus {
 	color: #111;
 }
 
-textarea {
-	/*width: 100%;*/
-}
-
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -550,14 +532,11 @@ a {
 }
 
 a:visited {
-	/*color: purple;*/
 }
 
 a:hover,
 a:focus,
 a:active {
-	/*color: midnightblue;*/
-	/*border-bottom: 1px solid;*/
 	text-decoration: underline;
 }
 
@@ -687,8 +666,6 @@ a:active {
 	width: 32px;
 }
 .menu-toggle:hover {
-	/*box-shadow: none;*/
-	/*background: none;*/
 }
 	.main-navigation li:hover ul {
 		display: block;
@@ -994,6 +971,39 @@ object {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.site-header {
+	left: 0;
+	right: 0;
+	top: 0;	
+		
+	padding: 10px;
+	margin-bottom: 10px;
+
+	background: white;
+	z-index: 999;
+	box-shadow: 0 1px 11px rgba(0,0,0,.4);
+	}
+	.nav_footer {
+		display: none;
+		
+	bottom: 0;
+	}
+	.toggled .nav_footer {
+		display: block;
+	}
+.nav_phone {
+	text-align: center;
+	background-size: 20px;
+	background-position-x: 90px; 
+	background-position-y: 2px;
+}
+.nav_footer .textwidget {
+	font-size: .8rem;
+	text-align: center;
+	color: gray;
+	font-weight: lighter;
+	
+}
 .main-navigation li a {
 	display: block;
 	padding: .6rem 0;
@@ -1024,9 +1034,12 @@ object {
 	margin: 5px;
 	color: gray;
 }
-.breadcrumbs {
-	font-size: .8rem;
-}
+/*--------------------------------------------------------------
+# Home page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Записи и заголовки с фоновым изображением
+--------------------------------------------------------------*/
 /* Запись из категории 1block-home */
 .category-1block-home {
 	position: relative;
@@ -1039,21 +1052,10 @@ object {
 .post_thumb-bgblock {
 	padding: 70px 5px;
 }
-/* Стрелка вниз в первом блоке на главной */
-.next-block-link {
-	content: '';
-	width: 32px;
-	height: 32px;
-	position: absolute;
-	bottom: 30px;
-	left: 0;
-	right: 0;
-	margin: auto;
-	background: url(img/down-arrow.png) center / 32px no-repeat;
-}
 .post_thumb-bgblock-benefits {
 	padding: 70px 5px;
 }
+/* Заголовок на фоне фото */
 .entry-title-bgblock,
 .entry-title-bgblock-benefits {
 	text-align: center;
@@ -1067,6 +1069,7 @@ object {
 .entry-title-bgblock {
 	margin: 0 0 2.4rem;
 }
+/* Текст под заголовком на фоне фото */
 .entry-title-bgblock ~ p {
 	max-width: 800px;
 	margin: 0 auto 50px;
@@ -1077,12 +1080,10 @@ object {
 	letter-spacing: 1px;
 }
 .entry-title-bgblock {
-	font-size: 1.5rem;
 	max-width: 960px;
 	margin: 0 auto 2.4rem;
-	position: relative;
-	z-index: 1;
 }
+/* Размытие для лучшей читаемости */
 .entry-title-bgblock:before {
 	content: '';
 	position: absolute;
@@ -1126,55 +1127,21 @@ object {
 .entry-title-bgblock-benefits {
 	margin: 0 0 6.4rem;
 }
-.entry-title-bxcarousel {
-	font-size: 1.3rem;
-}
-/* Games with blur */
-.blur-wrap {	
-	position: absolute;
-	-webkit-filter: blur(20px);
-	left: 0;
-	height: 50px;
-	overflow: hidden;
-	top: 270px;
-	width: 960px;	
-	margin: auto;
-	right: 0;
-}
-.blur-wrap-2 {
-	top: 360px;
-	width: 700px;
-}
-.blur-wrap:after {
+/* Стрелка вниз в первом блоке на главной */
+.next-block-link {
 	content: '';
-	background: rgba(255,255,255,.3);
+	width: 32px;
+	height: 32px;
 	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-.blur-wrap img {
-	min-height: 100%;
-	width: 100%;
-	height: auto;
-	position: fixed;
-	top: 0;
+	bottom: 30px;
 	left: 0;
-	z-index: -2;
-	transform: translateZ(0);
-}
-.blur-wrap-benefits {
-	-webkit-filter: blur(50px);
-	width: 24%;
-	height: 450px;
-	top: 250px;
+	right: 0;
 	margin: auto;
+	background: url(img/down-arrow.png) center / 32px no-repeat;
 }
-.blur-wrap-benefits:nth-of-type(3) {
-	margin: auto auto auto 3.5%;
-}
-.blur-wrap-benefits:nth-of-type(2) {
-	margin: auto 4.5% auto auto;
-}
+/*--------------------------------------------------------------
+# Блок преимуществ
+--------------------------------------------------------------*/
 .content-bgblock-benefits {
 	position: relative;
 	
@@ -1212,7 +1179,10 @@ object {
 	font-weight: lighter;
 	
 }
-/* #Module */
+/*--------------------------------------------------------------
+# Модули
+--------------------------------------------------------------*/
+/* Кнопки */
 .button {
 	display: block;
 	padding: .6rem;
@@ -1232,6 +1202,7 @@ object {
 	box-shadow: 0 0 30px;
 	text-decoration: none;
 }
+/* Кнопка в хедере */
 .button-nav {
 	max-width: 15rem;
 	padding: .6rem 1.6rem;
@@ -1241,16 +1212,17 @@ object {
 		padding: 5px;
 		max-width: 13rem;
 }
+/* Кнопка в блоке с фоном */
 .button-bgblock {
 	max-width: 15rem;
 	margin: 0 auto;
 	position: relative;
 	z-index: 5;
 }
-
 .button-single {
 	max-width: 20rem;
 }
+/* Таблицы */
 tr:not(:last-child) {
 	border-bottom: 1px solid gray;
 }
@@ -1264,7 +1236,7 @@ td:not(:first-child) {
 	text-align: center;
 	
 }
-/* Slider */
+/* Слайдер */
 .carousel-wrap,
 .slidebx-classic_wrap {
 	position: relative;
@@ -1328,39 +1300,80 @@ td:not(:first-child) {
 .slidebx-classic {
 	top: 120px;
 }
-.site-header {
+.entry-title-bxcarousel {
+	font-size: 1.3rem;
+}
+/* Размытие */
+.blur-wrap {	
+	position: absolute;
+	-webkit-filter: blur(20px);
 	left: 0;
+	height: 50px;
+	overflow: hidden;
+	top: 270px;
+	width: 960px;	
+	margin: auto;
 	right: 0;
-	top: 0;	
-		
+}
+.blur-wrap-2 {
+	top: 360px;
+	width: 700px;
+}
+.blur-wrap:after {
+	content: '';
+	background: rgba(255,255,255,.3);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.blur-wrap img {
+	min-height: 100%;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -2;
+	transform: translateZ(0);
+}
+.blur-wrap-benefits {
+	-webkit-filter: blur(50px);
+	width: 24%;
+	height: 450px;
+	top: 250px;
+	margin: auto;
+}
+.blur-wrap-benefits:nth-of-type(3) {
+	margin: auto auto auto 3.5%;
+}
+.blur-wrap-benefits:nth-of-type(2) {
+	margin: auto 4.5% auto auto;
+}
+/*--------------------------------------------------------------
+# Форма обратной связи
+--------------------------------------------------------------*/
+#wpcf7-f112-o1 {
 	padding: 10px;
-	margin-bottom: 10px;
-
-	background: white;
-	z-index: 999;
-	box-shadow: 0 1px 11px rgba(0,0,0,.4);
-	}
-	.nav_footer {
-		display: none;
+	max-width: 320px;
+	margin: 0 auto;
+	text-align: center;
+}
+#wpcf7-f112-o1 input,
+#wpcf7-f112-o1 textarea {
+	max-width: 100%;
+}
+.form_submit input {
+	padding: 20px 80px;
+	width: 330px;
+	float: left;
+	margin-top: 30px;
+	font-size: 1.3rem;
+	text-align: center;
 		
-	bottom: 0;
 	}
-	.toggled .nav_footer {
-		display: block;
-	}
-.nav_phone {
-	text-align: center;
-	background-size: 20px;
-	background-position-x: 90px; 
-	background-position-y: 2px;
-}
-.nav_footer .textwidget {
-	font-size: .8rem;
-	text-align: center;
-	color: gray;
-	font-weight: lighter;
-	
-}
+/*--------------------------------------------------------------
+# Блок call to action на главной 
+--------------------------------------------------------------*/
 .cta-home_title,
 .cta-home_subtitle {
 	text-align: center;
@@ -1375,21 +1388,6 @@ td:not(:first-child) {
 	font-weight: lighter;
 	
 	color: gray;
-}
-.services {
-	padding: 10px;
-}
-.service a {
-	display: block;
-	text-decoration: none;
-	padding: 150px;
-	box-shadow: 2px 2px 0 black;
-	transition: all 1s;
-}
-.service a:hover {
-	background: #f9ba32;
-	color: white;
-	box-shadow: 5px 5px 0 black;
 }
 .slidebx-classic_wrap {
 	width: 90%;
@@ -1433,6 +1431,9 @@ td:not(:first-child) {
 	display: table;
 	clear: both;
 }
+/*--------------------------------------------------------------
+# Блок схема работы на главной 
+--------------------------------------------------------------*/
 .workscheme {
 	position: relative;
 	padding: 220px 20px 20px;
@@ -1460,26 +1461,9 @@ td:not(:first-child) {
 	top: 0;
 	margin: auto;
 }
-#wpcf7-f112-o1 {
-	padding: 10px;
-	max-width: 320px;
-	margin: 0 auto;
-	text-align: center;
-}
-#wpcf7-f112-o1 input,
-#wpcf7-f112-o1 textarea {
-	max-width: 100%;
-}
-.form_submit input {
-	padding: 20px 80px;
-	width: 330px;
-	float: left;
-	margin-top: 30px;
-	font-size: 1.3rem;
-	text-align: center;
-		
-	}
-/* Single content */
+/*--------------------------------------------------------------
+# Стили для одной записи
+--------------------------------------------------------------*/
 .entry-price {
 	font-size: 2.5rem;
 	font-weight: bold;
@@ -1499,7 +1483,9 @@ td:not(:first-child) {
 	padding: 5px;
 	border: 1px solid silver;
 }
-/* Archive */
+/*--------------------------------------------------------------
+# Стили для архива
+--------------------------------------------------------------*/
 .archive-entry {
 	padding: 30px;
 	margin: 0;
@@ -1523,11 +1509,23 @@ td:not(:first-child) {
 	font-weight: lighter;
 	
 }
+/*--------------------------------------------------------------
+# Стили для страницы 404
+--------------------------------------------------------------*/
 .error-404 {
 		padding: 10px;
 	}
-/* Medium screens */
+/*--------------------------------------------------------------
+# Other
+--------------------------------------------------------------*/
+.breadcrumbs {
+	font-size: .8rem;
+}
+/*--------------------------------------------------------------
+# Медиазапросы для мониторов ноутбуков
+--------------------------------------------------------------*/
 @media (min-width: 1000px) and (max-width: 1699px) {
+	/* Общая обертка */
 	.content-area-single {
 		margin-top: 30px;
 		padding: 10px;
@@ -1535,6 +1533,10 @@ td:not(:first-child) {
 	.site-main-page {
 		margin-top: 30px;
 	}
+	.site-content {
+		margin-top: 60px;
+	}
+	/* Шапка */
 	.site-header {
 		left: 0;
 		right: 0;
@@ -1627,9 +1629,7 @@ td:not(:first-child) {
 		clear: right;
 		
 	}
-	.site-content {
-		margin-top: 60px;
-	}
+	/* Блоки с фоновым изображением */
 	.post_thumb-bgblock {
 		padding: 170px 20px;
 	}
@@ -1647,6 +1647,7 @@ td:not(:first-child) {
 	.entry-title-bgblock-benefits {
 		font-size: 2.5rem;
 	}
+	/* Преимущества */
 	.benefit {
 		width: 28%;
 		margin: 0 2% 3%;
@@ -1659,16 +1660,7 @@ td:not(:first-child) {
 	.benefit:first-of-type {
 		margin-left: 3%
 	}
-	.service {
-		width: 45%;
-		
-		float: left;
-		text-align: center;
-		margin: 0 2%;
-	}
-	.service:last-of-type {
-		margin-right: 0;
-	}
+	/* Слайдер */
 	.slidebx-classic_wrap {
 		width: 80%;
 		margin: 0 auto 10rem;
@@ -1687,6 +1679,7 @@ td:not(:first-child) {
 		display: block;
 		width: 35%;
 	}
+	/* н Схема работы */
 	.workscheme {
 		float: left;
 		width: 30%;
@@ -1694,10 +1687,12 @@ td:not(:first-child) {
 	.workscheme:not(:nth-of-type(3n)) {
 		margin-right: 4%;
 	}
+	/* н Форма */
 	#wpcf7-f112-o1 {
 		max-width: 320px;
 		margin: 0 auto;
 	}
+	/* н Запись */
 	.entry-header {
 		margin-right: 40%;
 	}
@@ -1719,6 +1714,7 @@ td:not(:first-child) {
 		position: fixed;
 		
 	}
+	/* н Архив */
 	.archive-entry {
 		width: 25%;
 		float: left;
@@ -1734,18 +1730,23 @@ td:not(:first-child) {
 		bottom: -20px;
 		right: 30px;
 	}
+	/* н 404 */
 	.error-404 {
 		padding: 10px;
 	}
 }
-/* Large screens */
+/*--------------------------------------------------------------
+# Медиазапросы для широкоформатных мониторов(ш)
+--------------------------------------------------------------*/
 @media screen and (min-width: 1700px) {
+	/* ш обертка */
 	.site-content {
 		margin-left: 20%;
 	}
 	.content-area-single {
 		padding: 20px;
 	}
+	/* ш шапка */
 	.site-header {
 		width: 20%;
 		top: 0;
@@ -1797,17 +1798,7 @@ td:not(:first-child) {
 	.nav_phone {
 		margin: 6px 0 0;
 	}
-
-	.service {
-		width: 45%;
-		
-		float: left;
-		text-align: center;
-		margin: 0 2%;
-	}
-	.service:last-of-type {
-		margin-right: 0;
-	}
+	/* ш преимущества */
 	.benefit {
 		width: 25%;
 		float: left;
@@ -1819,6 +1810,7 @@ td:not(:first-child) {
 	.benefit:first-of-type {
 		margin-left: 2%
 	}
+	/* ш Слайдер */
 	.slidebx-classic_wrap {
 		width: 80%;
 		margin: 0 auto 10rem;
@@ -1837,6 +1829,7 @@ td:not(:first-child) {
 		display: block;
 		width: 35%;
 	}
+	/* ш Схема работы */
 	.workscheme {
 		float: left;
 		width: 30%;
@@ -1844,6 +1837,7 @@ td:not(:first-child) {
 	.workscheme:nth-of-type(3n) {
 		margin-left: 4%;
 	}
+	/* ш Форма обратной связи */
 	#wpcf7-f112-o1 {
 		max-width: 55%;
 		margin: 0 auto;
@@ -1861,11 +1855,11 @@ td:not(:first-child) {
 		float: left;
 		clear: left;
 	}
+	/* ш Подвал сайта */
 	.site-footer {
-		margin-left: 20%;
-		
-		
+		margin-left: 20%;		
 	}
+	/* ш Блоки с фоновым изображением */
 	.post_thumb-bgblock {
 		padding: 240px 20px;
 	}
@@ -1884,6 +1878,7 @@ td:not(:first-child) {
 	.entry-title-bgblock-benefits {
 		font-size: 2.5rem;
 	}
+	/* ш Одна запись */
 	.entry-header {
 		margin-right: 40%;
 	}
@@ -1905,6 +1900,7 @@ td:not(:first-child) {
 		position: fixed;
 		
 	}
+	/* ш Архив */
 	.archive-entry {
 		width: 25%;
 		float: left;
@@ -1923,6 +1919,7 @@ td:not(:first-child) {
 		bottom: -20px;
 		right: 30px;
 	}
+	/* ш Ошибка 404 */
 	.error-404 {
 		padding: 30px;
 	}

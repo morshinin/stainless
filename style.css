@@ -1542,7 +1542,7 @@ td:not(:first-child) {text-align: center;}
 
 	min-height: 250px;
 	
-	padding: 220px 20px 20px;
+	padding: 160px 20px 20px;
 	
 	text-align: center;
 }
@@ -1554,8 +1554,11 @@ td:not(:first-child) {text-align: center;}
 	top: 0;
 	right: 0;
 	left: 0;
+
+	width: 64px;
+	height: auto;
 	
-	margin: 38px auto auto;
+	margin: 42px auto auto;
 }
 .workscheme:before {
 	position: absolute;
@@ -1563,16 +1566,30 @@ td:not(:first-child) {text-align: center;}
 	right: 0;
 	left: 0;
 	
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	
 	margin: auto;
 	
+	border: 7px solid silver;
 	border-radius: 50%;
 	
-	background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(img/1.jpg) fixed no-repeat;
+	background: linear-gradient(rgba(0,100,0,.6), rgba(150,150,0,.8)), url(img/1.jpg) fixed no-repeat;
 	
 	content: '';
+}
+.workscheme:first-of-type:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	padding: 0 10px;
+
+	color: white;
+
+	background: #e74c3c;
+
+	content: 'Бесплатно';
 }
 /*--------------------------------------------------------------
 # м Стили для одной записи
@@ -1980,7 +1997,7 @@ td:not(:first-child) {text-align: center;}
 		
 		width: 30%;
 	}
-	.workscheme:nth-of-type(3n) {margin-left: 4%;} /* Центруем пункты схемы*/
+	.workscheme:nth-of-type(3n+1) {margin-left: 4%;} /* Центруем пункты схемы*/
 	/*--------------------------------------------------------------
 	# ш Форма обратной связи
 	--------------------------------------------------------------*/

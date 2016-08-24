@@ -553,24 +553,28 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
 	display: block;
 	float: left;
-	width: 100%;
+	clear: both;
 
 	position: fixed;
+	top: -400px;
 	right: 0;
 	left: 0;
-	padding: 0 20px 10px;
-	top: -400px;
-	background: white;
 	z-index: 9999;
+	
+	width: 100%;
+
+	padding: 0 20px 10px;
+
+	background: white;
+	
 	transition: all 1s;
 }
 .main-navigation.toggled {
 	top: 0;
+	
 	padding-top: 80px;
-
 }
 .menu-toggle {
 	position: fixed;
@@ -579,9 +583,12 @@ a:active {
 }
 .main-navigation ul {
 	display: none;
-	list-style: none;
+
 	margin: 0;
+
 	padding-left: 0;
+
+	list-style: none;
 }
 
 .main-navigation li {
@@ -590,26 +597,33 @@ a:active {
 
 .main-navigation a {
 	display: block;
+
 	text-decoration: none;
 }
 
-	.main-navigation ul ul {
-		box-shadow: none;
-		float: none;
-		position: relative;
-		right: -20px;
-		display: none;
-		background: white;
-		padding: 0 10px;
-		margin: 0;
-	}
-	.main-navigation li:hover ul {
-		display: block;
-	}
+.main-navigation ul ul {
+	display: none;
+	float: none;
+
+	position: relative;
+	right: -20px;
+
+	margin: 0;
+
+	padding: 0 10px;
+	
+	box-shadow: none;
+	
+	background: white;
+
+}
+.main-navigation li:hover ul {
+	display: block;
+}
 
 .main-navigation ul ul ul {
-	left: -999em;
 	top: 0;
+	left: -999em;
 }
 
 .main-navigation ul ul a {
@@ -657,13 +671,17 @@ a:active {
 	
 }
 .menu-toggle {
-	border: none;
-	box-shadow: 1px 1px 4px black;
-	background: url(img/menu-button.png) center no-repeat, linear-gradient(white, white);
-	padding: 20px;
-	background-size: 32px;
-	height: 32px;
 	width: 32px;
+	height: 32px;
+
+	padding: 20px;
+
+	border: none;
+
+	background: url(img/menu-button.png) center no-repeat, linear-gradient(white, white);
+	background-size: 32px;
+
+	box-shadow: 1px 1px 4px black;
 }
 .menu-toggle:hover {
 }
@@ -683,14 +701,16 @@ a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-	margin: 0 0 1.5em;
 	overflow: hidden;
+
+	margin: 0 0 1.5em;
 }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
 	float: left;
+
 	width: 50%;
 }
 
@@ -698,15 +718,20 @@ a:active {
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
 	float: right;
-	text-align: right;
+
 	width: 50%;
+
+	text-align: right;
 }
 .menu-item-has-children > a:after {
-	content: '';
 	position: absolute;
+
 	width: 30px;
 	height: 20px;
+
 	background: url(img/Down.png) 7px 5px / 15px no-repeat;
+
+	content: '';
 }
 
 /*--------------------------------------------------------------
@@ -965,62 +990,33 @@ object {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Mobile first
+# Mobile first(м)
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Header
+# м шапка
 --------------------------------------------------------------*/
 .site-header {
-	left: 0;
+	top: 0;
 	right: 0;
-	top: 0;	
-		
-	padding: 10px;
+	left: 0;
+	z-index: 999;
+			
 	margin-bottom: 10px;
+	padding: 10px;
 
 	background: white;
-	z-index: 999;
+	
 	box-shadow: 0 1px 11px rgba(0,0,0,.4);
 	}
-	.nav_footer {
-		display: none;
-		
-	bottom: 0;
-	}
-	.toggled .nav_footer {
-		display: block;
-	}
-.nav_phone {
-	text-align: center;
-	background-size: 20px;
-	background-position-x: 90px; 
-	background-position-y: 2px;
-}
-.nav_footer .textwidget {
-	font-size: .8rem;
-	text-align: center;
-	color: gray;
-	font-weight: lighter;
-	
-}
-.main-navigation li a {
-	display: block;
-	padding: .6rem 0;
-
-	font-size: 1rem;
-
-	text-decoration: none;
-
-	transition: box-shadow .3s;
-}
-.main-navigation li a:hover {
-	box-shadow: inset 0 -.3rem 0;
-}
 .site-branding {
 	margin: 0;
 	text-align: center;
 }
+/*--------------------------------------------------------------
+# н Обертка
+--------------------------------------------------------------*/
+/* м лого */
 .header_logolink {
 	display: block;
 	text-align: center;
@@ -1028,23 +1024,67 @@ object {
 .logo_img {
 	max-width: 50px;
 }
+/*--------------------------------------------------------------
+# м описание сайта
+--------------------------------------------------------------*/
 .site-description {
-	font-family: 'Jura-Light', Helvetica, Arial, sans-serif;
-	font-size: .8rem;
 	margin: 5px;
+
+	font-size: .8rem;
+	font-weight: lighter;
 	color: gray;
+}
+/*--------------------------------------------------------------
+# м навигация
+--------------------------------------------------------------*/
+.main-navigation li a {
+	display: block;
+	
+	padding: .6rem 0;
+
+	font-size: 1rem;
+	text-decoration: none;
+
+	transition: box-shadow .3s;
+}
+.main-navigation li a:hover {
+	box-shadow: inset 0 -.3rem 0;
+}
+.nav_footer {
+	display: none;
+		
+	bottom: 0;
+}
+.toggled .nav_footer {
+	display: block;
+}
+.nav_footer .textwidget {
+	font-size: .8rem;
+	font-weight: lighter;
+	text-align: center;
+	color: gray;
+}
+.nav_phone {
+	text-align: center;
+	background-size: 20px;
+	background-position-x: 90px; 
+	background-position-y: 2px;
 }
 /*--------------------------------------------------------------
 # Home page
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Записи и заголовки с фоновым изображением
+# м Записи и заголовки с фоновым изображением
 --------------------------------------------------------------*/
-/* Запись из категории 1block-home */
+/*--------------------------------------------------------------
+# Запись из категории 1block-home
+--------------------------------------------------------------*/
 .category-1block-home {
 	position: relative;
 }
-/* Фоновая фотка в первом блоке и блоке преимуществ на главной */
+/*--------------------------------------------------------------
+# Фоновая фотка в первом блоке и блоке преимуществ на главной
+--------------------------------------------------------------*/
 .post_thumb-bgblock,
 .post_thumb-bgblock-benefits {
 	width:100%;
@@ -1055,194 +1095,241 @@ object {
 .post_thumb-bgblock-benefits {
 	padding: 70px 5px;
 }
-/* Заголовок на фоне фото */
+/*--------------------------------------------------------------
+# Заголовок на фоне фото
+--------------------------------------------------------------*/
 .entry-title-bgblock,
 .entry-title-bgblock-benefits {
-	text-align: center;
 	position: relative;
-	color: white;
+	z-index: 1;
+
 	font-size: 1.5rem;
 	font-weight: bold;
+	text-align: center;
 	letter-spacing: 1px;
-	z-index: 1;
+	color: white;
 }
 .entry-title-bgblock {
 	margin: 0 0 2.4rem;
 }
-/* Текст под заголовком на фоне фото */
+/*--------------------------------------------------------------
+# Текст под заголовком на фоне фото
+--------------------------------------------------------------*/
 .entry-title-bgblock ~ p {
 	max-width: 800px;
+	
 	margin: 0 auto 50px;
 
 	font-size: 1rem;
-	color: white;
 	text-align: center;
 	letter-spacing: 1px;
+	color: white;
 }
 .entry-title-bgblock {
 	max-width: 960px;
+	
 	margin: 0 auto 2.4rem;
 }
-/* Размытие для лучшей читаемости */
+/*--------------------------------------------------------------
+# Размытие для лучшей читаемости
+--------------------------------------------------------------*/
 .entry-title-bgblock:before {
-	content: '';
 	position: absolute;
-	background: rgba(0,0,0,.7);
+	z-index: -1;
+	
 	width: 90%;
 	height: 140px;
+	
+	background: rgba(0,0,0,.7);
+	
+	content: '';
+	
 	-webkit-filter: blur(90px);
 	filter: blur(90px);
-	z-index: -1;
 }
 .entry-title-bgblock ~ p:before {
-	content: '';
 	position: absolute;
-	background: rgba(0,0,0,.7);
+	z-index: -1;
+	
 	width: 100%;
 	height: 100%;
+	
+	background: rgba(0,0,0,.7);
+	
+	content: '';
+	
 	-webkit-filter: blur(90px);
 	filter: blur(90px);
-	z-index: -1;
 }
 .bgblock-testimonials {
 	background: url(img/3.jpg) center / cover fixed no-repeat;
 }
-/* Фон заголовка блока преимущества*/
+/*--------------------------------------------------------------
+# м Фон заголовка блока преимущества
+--------------------------------------------------------------*/
 .entry-title-bgblock-benefits:before {
-	content: '';
 	position: absolute;
+	z-index: -1;
+	
 	width: 50%;
 	height: 90px;
+	
+	content: '';
+	
 	-webkit-filter: blur(90px);
 	filter: blur(90px);
-	z-index: -1;
 }
 .entry-title-bgblock ~ p {
-	max-width: 700px;
-	font-weight: lighter;
-	letter-spacing: 1px;
 	position: relative;
 	z-index: 2;
+	
+	max-width: 700px;
+	
+	font-weight: lighter;
+	letter-spacing: 1px;
 }
 .entry-title-bgblock-benefits {
 	margin: 0 0 6.4rem;
 }
-/* Стрелка вниз в первом блоке на главной */
+/*--------------------------------------------------------------
+# м Стрелка вниз в первом блоке на главной
+--------------------------------------------------------------*/
 .next-block-link {
-	content: '';
-	width: 32px;
-	height: 32px;
 	position: absolute;
+	right: 0;
 	bottom: 30px;
 	left: 0;
-	right: 0;
+	
+	width: 32px;
+	height: 32px;
+	
 	margin: auto;
+	
 	background: url(img/down-arrow.png) center / 32px no-repeat;
+	
+	content: '';
 }
 /*--------------------------------------------------------------
-# Блок преимуществ
+# м Блок преимуществ
 --------------------------------------------------------------*/
 .content-bgblock-benefits {
 	position: relative;
 	
 }
 .benefit {
-	margin: 0 5% 3%;
-	text-align: center;
-	padding: 30px;
-	color: white;
 	position: relative;
 	z-index: 1;
+	
+	margin: 0 5% 3%;
+	padding: 30px;
+	
+	text-align: center;
+	color: white;
 }
 .benefit p {
 	font-size: 1.1rem;
 	font-weight: lighter;
-	
 }
 .benefit:before {
-	content: '';
 	position: absolute;
+	z-index: -1;
+	top: 140px;
+	left: 0;
+	
 	width: 100%;
 	height: 60%;
-	left: 0;
-	top: 140px;
+	
+	content: '';
+	
 	-webkit-filter: blur(90px);
 	filter: blur(90px);
-	z-index: -1;
 }
+/*--------------------------------------------------------------
+# м Футер
+--------------------------------------------------------------*/
 .site-footer {
 	text-align: center;
 }
 .site-info {
 	font-size: .8rem;
-	color: gray;
 	font-weight: lighter;
-	
+	color: gray;
 }
 /*--------------------------------------------------------------
-# Модули
+# м Модули
 --------------------------------------------------------------*/
-/* Кнопки */
+/*--------------------------------------------------------------
+# м кнопки
+--------------------------------------------------------------*/
 .button {
 	display: block;
-	padding: .6rem;
 	clear: both;
 	
-	text-decoration: none;
-	text-align: center;
-	color: #fff;
-	letter-spacing: 1px;
-
-	background: #f9ba32;
+	padding: .6rem;
+	
 	border-radius: 3px;
+	
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: #fff;
+	
+	background: #f9ba32;
 
 	transition: all 1s;
 }
 .button:hover {
 	box-shadow: 0 0 30px;
+	
 	text-decoration: none;
 }
-/* Кнопка в хедере */
+/*--------------------------------------------------------------
+# м Кнопка в хедере
+--------------------------------------------------------------*/
 .button-nav {
-	max-width: 15rem;
-	padding: .6rem 1.6rem;
-	margin: 0 auto 2.4rem;
+	max-width: 13rem;
+	
+	margin: 0 auto 15px;
+	
+	padding: 5px;
+	
 	font-size: 1rem;
-	margin-bottom: 15px;
-		padding: 5px;
-		max-width: 13rem;
 }
-/* Кнопка в блоке с фоном */
+/*--------------------------------------------------------------
+# м Кнопка в блоке с фоном
+--------------------------------------------------------------*/
 .button-bgblock {
-	max-width: 15rem;
-	margin: 0 auto;
 	position: relative;
 	z-index: 5;
+	
+	max-width: 15rem;
+	
+	margin: 0 auto;
 }
+/*--------------------------------------------------------------
+# м Кнопка на странице записи
+--------------------------------------------------------------*/
 .button-single {
 	max-width: 20rem;
 }
-/* Таблицы */
-tr:not(:last-child) {
-	border-bottom: 1px solid gray;
-}
-td {
-	padding: 10px;
-}
-td:not(:last-child) {
-	border-right: 1px solid gray;
-}
-td:not(:first-child) {
-	text-align: center;
-	
-}
-/* Слайдер */
+/*--------------------------------------------------------------
+# м Таблицы
+--------------------------------------------------------------*/
+tr:not(:last-child) {border-bottom: 1px solid gray;}
+td {padding: 10px;}
+td:not(:last-child) {border-right: 1px solid gray;}
+td:not(:first-child) {text-align: center;}
+/*--------------------------------------------------------------
+# м Слайдер
+--------------------------------------------------------------*/
 .carousel-wrap,
 .slidebx-classic_wrap {
 	position: relative;
-	padding: 10px;
-	margin: 0 50px;
 	z-index: 5;
+
+	margin: 0 50px;
+
+	padding: 10px;
 }
 #carousel-1-prev,
 #carousel-2-prev,
@@ -1263,17 +1350,18 @@ td:not(:first-child) {
 }
 .slidebx-carousel-prev,
 .slidebx-carousel-next {
+	z-index: 999;
 	
 	width: 52px;
 	height: 52px;
-	z-index: 999;
+	
 	cursor: pointer;
 	transition: transform .5s;
 }
 .slidebx-carousel-prev {
 	left: -50px;
-	background: url(img/Previous.png) center center/ 32px no-repeat;
 	
+	background: url(img/Previous.png) center center/ 32px no-repeat;
 }
 .slidebx-carousel-prev:hover,
 .slidebx-carousel-next:hover {
@@ -1282,6 +1370,7 @@ td:not(:first-child) {
 .slidebx-carousel-next {
 	right: -50px;
 	left: auto;
+	
 	background: url(img/Next.png) center center/ 32px no-repeat;
 }
 .slidebx-classic-prev {
@@ -1303,59 +1392,123 @@ td:not(:first-child) {
 .entry-title-bxcarousel {
 	font-size: 1.3rem;
 }
-/* Размытие */
+.slidebx-classic_wrap {
+	width: 90%;
+	
+	margin: 0 auto 3rem;
+}
+.slidebx-classic img {
+	height: auto;
+}
+.slick-slide {
+	padding: 0 30px;
+}
+.slick-carousel-home .slick-slide {
+	position: relative;
+	
+	min-height: 470px;
+	
+	padding-bottom: 50px;
+}
+.slick-carousel-home .entry-price-archive {
+	position: absolute;
+	right: 30px;
+	bottom: -20px;
+}
+.slick-carousel-home .slick-slide > a {	/* Выбираем только ссылки с изображениями в слайдере */
+	display: inline-block;
+	
+	overflow: hidden;
+	
+	padding: 5px;
+	
+	border: 1px solid silver;
+	
+	box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+}
+.slick-carousel-home img {
+	transition: transform 25s;
+}
+.slick-carousel-home a:hover img {
+	transform: scale(1.5);
+}
+.slick-classic-home img {
+	float: left;
+}
+.slick-classic-home:after {
+	display: table;
+	clear: both;
+	
+	content: '';
+}
+/*--------------------------------------------------------------
+# м Размытие
+--------------------------------------------------------------*/
 .blur-wrap {	
 	position: absolute;
-	-webkit-filter: blur(20px);
+	top: 270px;
+	right: 0;
 	left: 0;
+	
+	width: 960px;	
 	height: 50px;
 	overflow: hidden;
-	top: 270px;
-	width: 960px;	
+	
 	margin: auto;
-	right: 0;
+	
+	-webkit-filter: blur(20px);
 }
 .blur-wrap-2 {
 	top: 360px;
+	
 	width: 700px;
 }
 .blur-wrap:after {
-	content: '';
-	background: rgba(255,255,255,.3);
 	position: absolute;
+	
 	width: 100%;
 	height: 100%;
+	
+	background: rgba(255,255,255,.3);
+	
+	content: '';
 }
 .blur-wrap img {
-	min-height: 100%;
-	width: 100%;
-	height: auto;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: -2;
+	
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	
 	transform: translateZ(0);
 }
 .blur-wrap-benefits {
-	-webkit-filter: blur(50px);
+	top: 250px;
+	
 	width: 24%;
 	height: 450px;
-	top: 250px;
+	
 	margin: auto;
+	
+	-webkit-filter: blur(50px);
 }
-.blur-wrap-benefits:nth-of-type(3) {
-	margin: auto auto auto 3.5%;
-}
-.blur-wrap-benefits:nth-of-type(2) {
-	margin: auto 4.5% auto auto;
-}
+.blur-wrap-benefits:nth-of-type(3) {margin: auto auto auto 3.5%;}
+.blur-wrap-benefits:nth-of-type(2) {margin: auto 4.5% auto auto;}
 /*--------------------------------------------------------------
-# Форма обратной связи
+# м Форма обратной связи
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# м форма на главной
 --------------------------------------------------------------*/
 #wpcf7-f112-o1 {
-	padding: 10px;
 	max-width: 320px;
+	
 	margin: 0 auto;
+	padding: 10px;
+
 	text-align: center;
 }
 #wpcf7-f112-o1 input,
@@ -1363,14 +1516,16 @@ td:not(:first-child) {
 	max-width: 100%;
 }
 .form_submit input {
-	padding: 20px 80px;
-	width: 330px;
 	float: left;
+	
+	width: 330px;
+	
 	margin-top: 30px;
+	padding: 20px 80px;
+	
 	font-size: 1.3rem;
 	text-align: center;
-		
-	}
+}
 /*--------------------------------------------------------------
 # Блок call to action на главной 
 --------------------------------------------------------------*/
@@ -1386,83 +1541,52 @@ td:not(:first-child) {
 }
 .title-with-definition ~ p {
 	font-weight: lighter;
-	
 	color: gray;
 }
-.slidebx-classic_wrap {
-	width: 90%;
-	margin: 0 auto 3rem;
-}
-.slidebx-classic img {
-	height: auto;
-}
-.slick-slide {
-	padding: 0 30px;
-}
-.slick-carousel-home .slick-slide {
-	position: relative;
-	min-height: 470px;
-	padding-bottom: 50px;
-}
-.slick-carousel-home .entry-price-archive {
-	position: absolute;
-	bottom: -20px;
-	right: 30px;
-}
-/* Выбираем только ссылки с изображениями в слайдере */
-.slick-carousel-home .slick-slide > a {
-	padding: 5px;
-	border: 1px solid silver;
-	box-shadow: 1px 1px 3px rgba(0,0,0,.3);
-	display: inline-block;
-	overflow: hidden;
-}
-.slick-carousel-home img {
-	transition: transform 25s;
-}
-.slick-carousel-home a:hover img {
-	transform: scale(1.5);
-}
-.slick-classic-home img {
-	float: left;
-}
-.slick-classic-home:after {
-	content: '';
-	display: table;
-	clear: both;
-}
+
 /*--------------------------------------------------------------
-# Блок схема работы на главной 
+# м Блок схема работы на главной 
 --------------------------------------------------------------*/
 .workscheme {
 	position: relative;
-	padding: 220px 20px 20px;
-	text-align: center;
-	min-height: 250px;
 	z-index: 1;
+
+	min-height: 250px;
+	
+	padding: 220px 20px 20px;
+	
+	text-align: center;
 }
-/* Вариант с прозрачным фоном */
+/*--------------------------------------------------------------
+# м схема работы
+--------------------------------------------------------------*/
 .workscheme img {
 	position: absolute;
-	left: 0;
-	right: 0;
 	top: 0;
+	right: 0;
+	left: 0;
+	
 	margin: 38px auto auto;
 }
 .workscheme:before {
 	position: absolute;
-	content: '';
+	top: 0;
+	right: 0;
+	left: 0;
+	
 	width: 200px;
 	height: 200px;
-	border-radius: 50%;
-	background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(img/1.jpg) fixed no-repeat;
-	left: 0;
-	right: 0;
-	top: 0;
+	
 	margin: auto;
+	
+	border-radius: 50%;
+	
+	background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(img/1.jpg) fixed no-repeat;
+	
+	content: '';
 }
 /*--------------------------------------------------------------
-# Стили для одной записи
+# м Стили для одной записи
 --------------------------------------------------------------*/
 .entry-price {
 	font-size: 2.5rem;
@@ -1471,25 +1595,27 @@ td:not(:first-child) {
 }
 .price-label {
 	display: block;
+	
 	font-size: 1.5rem;
 	font-weight: lighter;	
 }
 .content-area-single,
-.site-main-page {
-		padding: 10px;
-	}
+.site-main-page {padding: 10px;}
 .content-area-single img,
 .site-main-page img {
 	padding: 5px;
+
 	border: 1px solid silver;
 }
 /*--------------------------------------------------------------
-# Стили для архива
+# м Стили для архива
 --------------------------------------------------------------*/
 .archive-entry {
-	padding: 30px;
-	margin: 0;
 	position: relative;
+	
+	margin: 0;
+	
+	padding: 30px;
 }
 .archive-entry .entry-title {
 	font-size: 1.2rem;
@@ -1497,37 +1623,34 @@ td:not(:first-child) {
 }
 .entry-price-archive {
 	font-size: 1.5rem;
-	text-align: right;
-	
 	font-weight: lighter;
-	
+	text-align: right;
 }
 .entry-price-archive span {
-	font-size: 1rem;
-	color: silver;
 	display: block;
-	font-weight: lighter;
 	
+	font-size: 1rem;
+	font-weight: lighter;
+	color: silver;
 }
 /*--------------------------------------------------------------
-# Стили для страницы 404
+# м Стили для страницы 404
 --------------------------------------------------------------*/
-.error-404 {
-		padding: 10px;
-	}
+.error-404 {padding: 10px;}
 /*--------------------------------------------------------------
-# Other
+# м Хлебные крошки
 --------------------------------------------------------------*/
-.breadcrumbs {
-	font-size: .8rem;
-}
+.breadcrumbs {font-size: .8rem;}
 /*--------------------------------------------------------------
-# Медиазапросы для мониторов ноутбуков
+# Медиазапросы для мониторов ноутбуков(н)
 --------------------------------------------------------------*/
 @media (min-width: 1000px) and (max-width: 1699px) {
-	/* Общая обертка */
+	/*--------------------------------------------------------------
+	# н Обертка
+	--------------------------------------------------------------*/
 	.content-area-single {
 		margin-top: 30px;
+		
 		padding: 10px;
 	}
 	.site-main-page {
@@ -1536,391 +1659,418 @@ td:not(:first-child) {
 	.site-content {
 		margin-top: 60px;
 	}
-	/* Шапка */
+	/*--------------------------------------------------------------
+	# н Шапка
+	--------------------------------------------------------------*/
 	.site-header {
-		left: 0;
-		right: 0;
-		top: 0;	
 		position: fixed;
+		top: 0;	
+		right: 0;
+		left: 0;
+		z-index: 9999;
 			
-		padding: 10px;
 		margin: 0;
+		
+		padding: 10px;
 
 		box-shadow: 0 1px 11px rgba(0,0,0,.4);
-		z-index: 9999;
-		}
+	}
 	.site-branding {
 		float: left;
+		
 		border: 0;
+		
 		margin-bottom: 0;
 	}
-	.logo_img {
-		max-width: 70px;
-	}
+	.logo_img {max-width: 70px;}
 	.site-description {
 		float: left;
 		clear: left;
+
 		margin: 0;
 	}
+	/*--------------------------------------------------------------
+	# н Навигация
+	--------------------------------------------------------------*/
 	.main-navigation {
 		float: right;
 		clear: none;
-		width: auto;
-		padding: 5px 10px 0;
+		
+		position: static;
+		right: 0;
+		left: 0;
+		top: 50px;
 
-	position: static;
-	right: 0;
-	left: 0;
-	top: 50px;
-}
-	.main-navigation ul {
-		margin-bottom: 0;
+		width: auto;
+		
+		padding: 5px 10px 0;
 	}
+	.main-navigation ul {margin-bottom: 0;}
 	.main-navigation ul li {
 		float: left;
+
 		margin: 0 20px;
 	}
-	.main-navigation li a {
-		font-size: 1rem;
-	}
+	.main-navigation li a {font-size: 1rem;}
 	.main-navigation ul ul {
-		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 		position: absolute;
-		background: white;
 		top: auto;
 		right: auto;
-		padding: 0 0 5px 0;
 		z-index: 99999;
-	}
-	.main-navigation ul li:hover > ul {
-		display: block;
+
+		padding: 0 0 5px 0;
 		
+		background: white;
+		
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 	}
-	.main-navigation li ul > li {
-		margin-left: 0;
-}
-	.main-navigation ul ul a {
-	padding: .6rem 20px;
-}
+	.main-navigation ul li:hover > ul {display: block;}
+	.main-navigation li ul > li {margin-left: 0;}
+	.main-navigation ul ul a {padding: .6rem 20px;}
 	.nav_footer {
 		display: block;
-		bottom: 0;
+
 		right: 30px;
+		bottom: 0;
+
 		padding: 10px;
+		
 		background: white;
-	}
-	.button-nav {
-		font-size: .8rem;
-		padding: 5px 18px;
-		position: absolute;
-		bottom: -32px;
-		right: 0;
-		margin: 0 10px 3px 0;
-		box-shadow: none;
 	}
 	.nav_phone {
 		float: right;
-		padding: 0 0 0 20px;
+		
 		margin: 6px 0 0;
+		
+		padding: 0 0 0 20px;
+		
 		background-position-x: 0;
 	}
 	.nav_footer .textwidget {
 		float: right;
 		clear: right;
+	}
+	/*--------------------------------------------------------------
+	# ш кнопка
+	--------------------------------------------------------------*/
+	.button-nav {
+		position: absolute;
+		right: 0;
+		bottom: -32px;
 		
+		margin: 0 10px 3px 0;
+		padding: 5px 18px;
+		
+		font-size: .8rem;
+		
+		box-shadow: none;
 	}
-	/* Блоки с фоновым изображением */
-	.post_thumb-bgblock {
-		padding: 170px 20px;
-	}
+	/*--------------------------------------------------------------
+	# н Блоки с фоновым изображением
+	--------------------------------------------------------------*/
+	.post_thumb-bgblock {padding: 170px 20px;}
 	.entry-title-bgblock {
-		font-size: 3.5rem;
 		width: 960px;
+
 		margin: 0 auto 2.4rem;
+
+		font-size: 3.5rem;
 	}
 	.entry-title-bgblock ~ p {
 		max-width: 700px;
-		font-weight: lighter;
+		
 		font-size: 1.5rem;
+		font-weight: lighter;
 		letter-spacing: 1px;
 	}
-	.entry-title-bgblock-benefits {
-		font-size: 2.5rem;
-	}
-	/* Преимущества */
+	.entry-title-bgblock-benefits {font-size: 2.5rem;}
+	/*--------------------------------------------------------------
+	# н Преимущества
+	--------------------------------------------------------------*/
 	.benefit {
-		width: 28%;
-		margin: 0 2% 3%;
 		float: left;
+
+		width: 28%;
 		min-height: 480px;
+
+		margin: 0 2% 3%;
 	}
-	.benefit:last-of-type {
-		margin-right: 0;
-	}
-	.benefit:first-of-type {
-		margin-left: 3%
-	}
-	/* Слайдер */
+	.benefit:last-of-type {margin-right: 0;}
+	.benefit:first-of-type {margin-left: 3%;}
+	/*--------------------------------------------------------------
+	# н Слайдер
+	--------------------------------------------------------------*/
 	.slidebx-classic_wrap {
 		width: 80%;
+		
 		margin: 0 auto 10rem;
 	}
 	.slidebx-classic img {
 		float: left;
+		
 		width: 48%;
 		height: auto;
 	}
 	.slidebx-classic_text {
 		float: left;
+		
 		width: 50%;
 	}
 	.slidebx-classic_slide > a {
-		float: left;
 		display: block;
+		float: left;
+		
 		width: 35%;
 	}
-	/* н Схема работы */
+	/*--------------------------------------------------------------
+	# н Схема работы
+	--------------------------------------------------------------*/
 	.workscheme {
 		float: left;
+		
 		width: 30%;
 	}
-	.workscheme:not(:nth-of-type(3n)) {
-		margin-right: 4%;
-	}
-	/* н Форма */
+	.workscheme:not(:nth-of-type(3n)) {margin-right: 4%;}
+	/*--------------------------------------------------------------
+	# н Форма
+	--------------------------------------------------------------*/
 	#wpcf7-f112-o1 {
 		max-width: 320px;
+
 		margin: 0 auto;
 	}
-	/* н Запись */
-	.entry-header {
-		margin-right: 40%;
-	}
+	/*--------------------------------------------------------------
+	# н Запись
+	--------------------------------------------------------------*/
+	.entry-header {margin-right: 40%;}
 	.entry-content {
-		width: 54%;
 		float: left;
 		clear: left;
+
+		width: 54%;
 	}
-	.entry-footer {
-		clear: both;
-	}
+	.entry-footer {clear: both;}
 	.entry-aside {
-		width: 40%;
 		float: right;
+
 		position: relative;
-		
+
+		width: 40%;
 	}
-	.entry-aside_content {
-		position: fixed;
-		
-	}
-	/* н Архив */
+	.entry-aside_content {position: fixed;}
+	/*--------------------------------------------------------------
+	# н Архив
+	--------------------------------------------------------------*/
 	.archive-entry {
-		width: 25%;
 		float: left;
-		padding: 10px 10px 50px;
-		margin: 0;
+
+		width: 25%;
 		min-height: 470px;
+
+		margin: 0;
+		
+		padding: 10px 10px 50px;
 	}
-	.archive-entry:nth-of-type(5n+5) {
-		clear: both;
-	}
+	.archive-entry:nth-of-type(5n+5) {clear: both;}
 	.entry-price-archive {
 		position: absolute;
-		bottom: -20px;
 		right: 30px;
+		bottom: -20px;
 	}
-	/* н 404 */
-	.error-404 {
-		padding: 10px;
-	}
+	/*--------------------------------------------------------------
+	# н 404
+	--------------------------------------------------------------*/
+	.error-404 {padding: 10px;}
 }
 /*--------------------------------------------------------------
 # Медиазапросы для широкоформатных мониторов(ш)
 --------------------------------------------------------------*/
 @media screen and (min-width: 1700px) {
-	/* ш обертка */
-	.site-content {
-		margin-left: 20%;
-	}
-	.content-area-single {
-		padding: 20px;
-	}
-	/* ш шапка */
+	/*--------------------------------------------------------------
+	# ш обертка
+	--------------------------------------------------------------*/
+	.site-content {margin-left: 20%;}
+	.content-area-single {padding: 20px;}
+	/*--------------------------------------------------------------
+	# ш шапка
+	--------------------------------------------------------------*/
 	.site-header {
-		width: 20%;
-		top: 0;
-		bottom: 0;
-		left: 0;
 		position: fixed;
+		bottom: 0;
+
 		overflow: scroll;
-		padding: 10px;
+		
+		width: 20%;
+		
 		margin-bottom: 0;
 
-	z-index: 999;
-	box-shadow: 0 5px 10px rgba(0,0,0,.5);
+		box-shadow: 0 5px 10px rgba(0,0,0,.5);
 	}
 	.site-branding {
-	margin: 0 0 20px;
-	text-align: center;
-	border-bottom: 1px dotted;
+		border-bottom: 1px dotted;
+		
+		margin: 0 0 20px;
+		
+		text-align: center;
 	}
 	.header_logolink {
-	display: block;
-	text-align: center;
+		display: block;
+
+		text-align: center;
 	}
 	.logo_img {
 		max-width: 70px;
 	}
+	/*--------------------------------------------------------------
+	# ш навигация 
+	--------------------------------------------------------------*/
 	.main-navigation {
-	position: static;
-	right: 0;
-	left: 0;
-	top: 50px;
-	padding: 10px;
+		position: static;
+		top: 50px;
+		right: 0;
+		left: 0;
+
+		padding: 10px;
 	}
 	.nav_footer {
 		display: block;
 		
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	padding-top: 20px;
-	margin-left: 10px;
-	border-top: 1px solid silver;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		margin-left: 10px;
+
+		padding-top: 20px;
+
+		border-top: 1px solid silver;
 	}
-	.button-nav {
-		margin-bottom: 15px;
-		padding: 5px;
-		max-width: 13rem;
-	}
-	.nav_phone {
-		margin: 6px 0 0;
-	}
-	/* ш преимущества */
+	.nav_phone {margin: 6px 0 0;}
+	/*--------------------------------------------------------------
+	# ш преимущества
+	--------------------------------------------------------------*/
 	.benefit {
-		width: 25%;
 		float: left;
+
+		width: 25%;
 		min-height: 450px;
 	}
-	.benefit:last-of-type {
-		margin-right: 0;
-	}
-	.benefit:first-of-type {
-		margin-left: 2%
-	}
-	/* ш Слайдер */
+	.benefit:last-of-type {margin-right: 0;}
+	.benefit:first-of-type {margin-left: 2%}
+	/*--------------------------------------------------------------
+	# ш Слайдер
+	--------------------------------------------------------------*/
 	.slidebx-classic_wrap {
 		width: 80%;
+
 		margin: 0 auto 10rem;
 	}
 	.slidebx-classic img {
 		float: left;
+		
 		width: 48%;
 		height: auto;
 	}
 	.slidebx-classic_text {
 		float: left;
+		
 		width: 50%;
 	}
 	.slidebx-classic_slide > a {
-		float: left;
 		display: block;
+		float: left;
+		
 		width: 35%;
 	}
-	/* ш Схема работы */
+	/*--------------------------------------------------------------
+	# ш Схема работы
+	--------------------------------------------------------------*/
 	.workscheme {
 		float: left;
+		
 		width: 30%;
 	}
-	.workscheme:nth-of-type(3n) {
-		margin-left: 4%;
-	}
-	/* ш Форма обратной связи */
+	.workscheme:nth-of-type(3n) {margin-left: 4%;} /* Центруем пункты схемы*/
+	/*--------------------------------------------------------------
+	# ш Форма обратной связи
+	--------------------------------------------------------------*/
 	#wpcf7-f112-o1 {
 		max-width: 55%;
+		
 		margin: 0 auto;
+		
 		text-align: left;
 	}
-	.form_name {
-		float: left;
-		
-	}
-	.form_message {
-		float: right;
-		
-	}
+	.form_name {float: left;}
+	.form_message {float: right;}
 	.form_phone {
 		float: left;
 		clear: left;
 	}
-	/* ш Подвал сайта */
-	.site-footer {
-		margin-left: 20%;		
-	}
-	/* ш Блоки с фоновым изображением */
-	.post_thumb-bgblock {
-		padding: 240px 20px;
-	}
+	/*--------------------------------------------------------------
+	# ш Блоки с фоновым изображением
+	--------------------------------------------------------------*/
+	.post_thumb-bgblock {padding: 240px 20px;}
 	.entry-title-bgblock {
-		font-size: 3.5rem;
 		width: 960px;
+
 		margin: 0 auto 2.4rem;
+
+		font-size: 3.5rem;
 	}
 	.entry-title-bgblock ~ p {
 		max-width: 700px;
-		font-weight: lighter;
-		
-		letter-spacing: 1px;
+
 		font-size: 1.5rem;
+		font-weight: lighter;
+		letter-spacing: 1px;
 	}
-	.entry-title-bgblock-benefits {
-		font-size: 2.5rem;
-	}
-	/* ш Одна запись */
-	.entry-header {
-		margin-right: 40%;
-	}
+	.entry-title-bgblock-benefits {font-size: 2.5rem;}
+	/*--------------------------------------------------------------
+	# ш Одна запись
+	--------------------------------------------------------------*/
+	.entry-header {margin-right: 40%;}
 	.entry-content {
-		width: 54%;
 		float: left;
 		clear: left;
+
+		width: 54%;
 	}
-	.entry-footer {
-		clear: both;
-	}
+	.entry-footer {clear: both;}
 	.entry-aside {
-		width: 40%;
-		float: right;
 		position: relative;
-		
+		float: right;
+
+		width: 40%;
 	}
-	.entry-aside_content {
-		position: fixed;
-		
-	}
-	/* ш Архив */
+	.entry-aside_content {position: fixed;}
+	/*--------------------------------------------------------------
+	# ш Архив
+	--------------------------------------------------------------*/
 	.archive-entry {
-		width: 25%;
 		float: left;
-		padding: 10px;
-		margin: 0;
+
+		width: 25%;
 		min-height: 470px;
+
+		margin: 0;
+
+		padding: 10px;
 	}
-	.archive-entry h2 + p {
-		padding-bottom: 50px;
-	}
-	.archive-entry:nth-of-type(5n+5) {
-		clear: both;
-	}
+	.archive-entry h2 + p {padding-bottom: 50px;}
+	.archive-entry:nth-of-type(5n+5) {clear: both;}
 	.entry-price-archive {
 		position: absolute;
-		bottom: -20px;
 		right: 30px;
+		bottom: -20px;
 	}
-	/* ш Ошибка 404 */
-	.error-404 {
-		padding: 30px;
-	}
+	/*--------------------------------------------------------------
+	# ш Подвал сайта
+	--------------------------------------------------------------*/
+	.site-footer {margin-left: 20%;}
+	/*--------------------------------------------------------------
+	# ш Ошибка 404
+	--------------------------------------------------------------*/
+	.error-404 {padding: 30px;}
 }

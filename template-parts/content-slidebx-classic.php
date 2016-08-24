@@ -18,7 +18,7 @@
 				<?php endif; ?>
 			<div class="slidebx-classic_text">
 			<?php
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="entry-title">', '</h2>' );
 		
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */

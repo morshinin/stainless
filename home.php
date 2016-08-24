@@ -82,7 +82,7 @@ get_header(); ?>
 		 endwhile; ?>
 		 </section>
 		<section class="bgblock-testimonials clearfix">
-		  <h3 class="cta-home_title">
+		  <h3 class="cta-home_title bgblock-testimonials-title">
 		 		<?php _e('Отзывы'); ?>
 		 	</h3>
 		 <div class="slidebx-classic_wrap">

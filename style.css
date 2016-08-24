@@ -1164,7 +1164,12 @@ object {
 	filter: blur(90px);
 }
 .bgblock-testimonials {
+	padding: 30px 0;
+
 	background: url(img/3.jpg) center / cover fixed no-repeat;
+}
+.bgblock-testimonials-title {
+	color: white;
 }
 /*--------------------------------------------------------------
 # м Фон заголовка блока преимущества
@@ -1378,6 +1383,9 @@ td:not(:first-child) {text-align: center;}
 	top: 190px;
 	right: 60px;
 }
+/*--------------------------------------------------------------
+# м Слайдер отзывы
+--------------------------------------------------------------*/
 .slidebx-classic {
 	top: 120px;
 }
@@ -1388,6 +1396,15 @@ td:not(:first-child) {text-align: center;}
 	width: 90%;
 	
 	margin: 0 auto 3rem;
+}
+.slidebx-classic_text {
+	position: relative;
+	
+	padding: 10px;
+
+	border-radius: 7px;
+
+	background: white;
 }
 .slick-slide {
 	padding: 0 30px;
@@ -1423,6 +1440,13 @@ td:not(:first-child) {text-align: center;}
 }
 .slick-classic-home img {
 	float: left;
+
+	padding: 10px;
+
+	border: 1px solid silver;
+	box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+
+	background: white;
 }
 .slick-classic-home:after {
 	display: table;
@@ -1580,8 +1604,9 @@ td:not(:first-child) {text-align: center;}
 }
 .workscheme:first-of-type:after {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 15px;
+	left: 74px;
+	z-index: -1;
 
 	padding: 0 10px;
 
@@ -1981,7 +2006,21 @@ td:not(:first-child) {text-align: center;}
 	.slidebx-classic_text {
 		float: left;
 		
-		width: 50%;
+		width: 65%;
+
+		padding: 20px;
+
+		box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+	}
+	.slidebx-classic_text:before {
+		position: absolute;
+		top: 80px;
+		left: -40px;
+
+		border: 20px solid;
+		border-color: transparent white transparent transparent;
+
+		content: '';
 	}
 	.slidebx-classic_slide > a {
 		display: block;
@@ -1997,7 +2036,11 @@ td:not(:first-child) {text-align: center;}
 		
 		width: 30%;
 	}
-	.workscheme:nth-of-type(3n+1) {margin-left: 4%;} /* Центруем пункты схемы*/
+	.workscheme:nth-of-type(3n+1) {
+		clear: both;
+
+		margin-left: 4%;	/* Центруем пункты схемы*/
+	} 
 	/*--------------------------------------------------------------
 	# ш Форма обратной связи
 	--------------------------------------------------------------*/

@@ -70,7 +70,7 @@ get_header(); ?>
 			wp_reset_postdata();
 		 endwhile; ?>
 		 <section class="bgblock-workscheme clearfix">
-			 <h3 class="cta-home_title" id="workscheme">
+			 <h3 class="cta-home_title cta-home_title-workscheme" id="workscheme">
 			 	<?php _e('Схема работы'); ?>
 			 </h3>
 		<?php $showcta_home = new WP_Query('post_type=workscheme&posts_per_page=6');
